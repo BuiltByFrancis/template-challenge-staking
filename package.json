@@ -1,0 +1,27 @@
+{
+  "name": "template-challenge-staking",
+  "version": "1.0.0",
+  "description": "Contracts with missing implementation details and unit tests to help guide junior solidity developers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuiltByFrancis/template-challenge-staking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BuiltByFrancis/template-challenge-staking/issues"
+  },
+  "homepage": "https://github.com/BuiltByFrancis/template-challenge-staking#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.1",
+    "hardhat": "^2.11.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  }
+}
