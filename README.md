@@ -32,16 +32,16 @@ The tests are written with the assumption that the structure of the code within 
 
 # Improvements / Extensions
 General (Easy):
-    - I have explicitly removed all code comments for this challenge, so:
-        - add contract level comments
-        - add function level comments
-        - add implementation detail comments where applicable. (Dont over do it)
+- I have explicitly removed all code comments for this challenge, so:
+    - add contract level comments
+    - add function level comments
+    - add implementation detail comments where applicable. (Dont over do it)
 
 StakedNFT (Medium):
-    - I have ommited the code required to return a URI containing meta data for this contract.
-        - Add the code
-        - Test the code
+- I have ommited the code required to return a URI containing meta data for this contract.
+    - Add the code
+    - Test the code
 
 TokenEmitter (Hard):
-    - In a large collection setting up the "tokenRewardRateIndex" mapping would cost a huge amount of gas. Find an alternative method such as a merkle tree.
-        - Note: The use of a merkle tree will require the changing of several function signatures. Fix the tests alongside development.
+- In a large collection setting up the "tokenRewardRateIndex" mapping would cost a huge amount of gas. Find an alternative method such as a merkle tree.
+    - Note: The use of a merkle tree will require the changing of several function signatures. Fix the tests alongside development.
