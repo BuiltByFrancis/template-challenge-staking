@@ -239,7 +239,11 @@ describe("TokenEmitter", function () {
 
       it("should be callable as any user", async function () {
         const [_, other] = await ethers.getSigners();
-        expect(await sut.connect(other).findRate(tokenId)).to.eq(
+        expect(await sut.connect(other).findRate(tokenId)).to.not.be.reverted;
+      });
+
+      it("should be equal to tokens per day including decimals", async function () {
+        expect(await sut.findRate(tokenId)).to.eq(
           BigNumber.from("10000000000000000")
         );
       });
