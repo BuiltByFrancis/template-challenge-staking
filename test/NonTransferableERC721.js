@@ -22,7 +22,7 @@ describe("NonTransferableERC721", function () {
       expect(await sut.MintThenBurnSingle()).to.not.be.reverted;
     });
 
-    it("should revert with the NonTransferable error", async function () {
+    it("should revert with the NonTransferable error (dependant on minting)", async function () {
       const [owner, other] = await ethers.getSigners();
 
       // Mint an nft into the owners wallet.

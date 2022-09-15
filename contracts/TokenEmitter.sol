@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "./ERC20WithDecimals.sol";
 
-abstract contract TokenEmitter is Ownable {
+abstract contract TokenEmitter {
     event TokensClaimed(
         address user,
         uint256[] tokenIds,
@@ -24,28 +23,22 @@ abstract contract TokenEmitter is Ownable {
         ERC20WithDecimals tokenAddress_
     ) {}
 
-    function toggleEmissionsActive() external onlyOwner {}
+    function toggleEmissionsActive() external {}
 
-    function setBlocksPerDay(uint256 _blocksPerDay) external onlyOwner {}
+    function setBlocksPerDay(uint256 _blocksPerDay) external {}
 
-    function setTokenAddress(ERC20WithDecimals _newTokenAddress)
-        external
-        onlyOwner
-    {}
+    function setTokenAddress(ERC20WithDecimals _newTokenAddress) external {}
 
-    function setTokenRewardRateIndex(uint256 tokenId, uint256 index)
-        external
-        onlyOwner
-    {}
+    function setTokenRewardRateIndex(uint256 tokenId, uint256 index) external {}
 
     function setMultipleTokenRewardRatesToIndex(
         uint256[] memory _tokenIds,
         uint256 index
-    ) external onlyOwner {}
+    ) external {}
 
-    function setRewardRate(uint256 index, uint256 rate) external onlyOwner {}
+    function setRewardRate(uint256 index, uint256 rate) external {}
 
-    function withdrawTokens(uint256 amount) external onlyOwner {}
+    function withdrawTokens(uint256 amount) external {}
 
     function findRate(uint256 tokenId) external view returns (uint256 rate) {}
 

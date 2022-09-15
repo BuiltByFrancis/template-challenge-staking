@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/utils/math/Math.sol";
@@ -67,12 +66,9 @@ contract StakedNFT is TokenEmitter, NonTransferableERC721, IERC721Receiver {
         returns (uint256 total)
     {}
 
-    function setNFTAddress(IERC721 _newNFTAdress) external onlyOwner {}
+    function setNFTAddress(IERC721 _newNFTAdress) external {}
 
-    function setFinalRewardBlock(uint256 _finalRewardBlock)
-        external
-        onlyOwner
-    {}
+    function setFinalRewardBlock(uint256 _finalRewardBlock) external {}
 
     function _revertOnMissingToken(uint256 tokenId) private view {}
 
